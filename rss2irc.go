@@ -45,12 +45,6 @@ func (r2i *Rss2Irc) Start(ctx context.Context) error {
 	if err := r2i.ircClient.Connect(); err != nil {
 		return err
 	}
-	for k, fetcherList := range r2i.channelFeeds {
-		for _, fetcher := range fetcherList {
-			fmt.Println(k)
-			go r2i.fetchNewFeeds(k, fetcher)
-		}
-	}
 
 	<-r2i.quit
 	return nil
@@ -63,6 +57,12 @@ func (r2i *Rss2Irc) setHandler() {
 			for c := range r2i.channelFeeds {
 				conn.Join(c)
 				fmt.Printf("[SYS] Joined channel %s.\n", c)
+			}
+			for k, fetcherList := range r2i.channelFeeds {
+				for _, fetcher := range fetcherList {
+					fmt.Println(k)
+					go r2i.fetchNewFeeds(k, fetcher)
+				}
 			}
 		})
 	// And a signal on disconnect

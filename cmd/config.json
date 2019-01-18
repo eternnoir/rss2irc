@@ -3,7 +3,7 @@
     "host": "chat.freenode.net:6665",
     "ssl": false,
     "serverName": "",
-    "nick": "RSS2IRCBot<eternnoir/rss2irc>",
+    "nick": "eternnoirrss2irc",
     "refreshRate": 0,
     "channels": [
       {
@@ -18,6 +18,6 @@
           "http://rss.ptt.cc/beauty.xml"
         ]
       }
-    ],
+    ]
   }
 ]
