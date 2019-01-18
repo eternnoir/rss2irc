@@ -1,0 +1,23 @@
+[
+  {
+    "host": "chat.freenode.net:6665",
+    "ssl": false,
+    "serverName": "",
+    "nick": "RSS2IRCBot<eternnoir/rss2irc>",
+    "refreshRate": 0,
+    "channels": [
+      {
+        "channelName": "#ptt_gossiping",
+        "RssFeeds": [
+          "http://rss.ptt.cc/Gossiping.xml"
+        ]
+      },
+      {
+        "channelName": "#ptt_beauty",
+        "RssFeeds": [
+          "http://rss.ptt.cc/beauty.xml"
+        ]
+      }
+    ],
+  }
+]
