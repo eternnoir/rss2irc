@@ -94,7 +94,7 @@ func (r2i *Rss2Irc) fetchNewFeeds(channelName string, fetcher *FeedFetcher) {
 			continue
 		}
 		for _, u := range updates {
-			fmt.Printf("[SEND] %s : %s", channelName, u.Title)
+			fmt.Printf("[SEND] %s : %s\n", channelName, u.Title)
 			r2i.ircClient.Privmsgf(channelName, "%s | %s", u.Title, u.Link)
 		}
 	}
